@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9379b0ea35.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="port">
+            <h1>STUDENT COMPLAINT PORTAL</h1><br>
+            <h3>College Of Engineering Kallooppaara</h3><br>
+            <img src="ihrd.jpeg" width="50" height="50">
+        </div>
+       
+        <div class="form-box">
+            <h1 id="title">SIGN UP</h1>
+            <form>
+                <div class="inputgroup">
+                    <div  class="inputfield" >
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="id">
+                    </div>
+                    <div  class="inputfield" id="efield">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="email">
+                    </div>
+                    <div class="inputfield">
+                        <i class="fa-solid fa-key"></i>
+                        <input type="password" placeholder="password">
+                    </div>
+                    <p>
+                        forgot password  <a href="#">CLICK HERE!</a>
+                    </p>
+                </div>
+               
+                <div class="button">
+                    <button type="button" id="supbtn">SIGN UP</button>
+                    <button type="button" id="sinbtn" class="disable">SIGN IN</button>
+                </div>
+            </form>
+           
+        </div>
+       
+    </div>
+    <script>
+        let sinbtn=document.getElementById("sinbtn");
+        let suobtn=document.getElementById("supbtn");
+        let efield=document.getElementById("efield");
+        let title=document.getElementById("title");
+        sinbtn.onclick=function(){
+            efield.style.maxHeight="0";
+            title.innerText="SIGN IN"
+            supbtn.classList.add("disable");
+            sinbtn.classList.remove("disable");
+
+                 }
+                 supbtn.onclick=function(){
+            efield.style.maxHeight="60px";
+            title.innerText="SIGN UP"
+            supbtn.classList.remove("disable");
+            sinbtn.classList.add("disable");
+
+                 }
+    </script>
+</body>
+</html>
